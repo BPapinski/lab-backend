@@ -7,21 +7,30 @@
         <span class="badge">Zalogowany</span>
     </div>
     <div class="labs-grid">
-        {% set labs = [
-            ("Lab 01", "HTML & CSS", "Podstawy struktury i stylowania stron"),
-            ("Lab 02", "JavaScript", "Interaktywność i dynamiczne elementy"),
-            ("Lab 03", "Responsive Design", "RWD i media queries"),
-            ("Lab 04", "Formularze", "Walidacja i obsługa danych"),
-            ("Lab 05", "Backend", "Serwer, MVC, bazy danych"),
-            ("Lab 06", "Projekt", "Finalny projekt zaliczeniowy"),
-        ] %}
-        {% for num, title, desc in labs %}
         <div class="lab-card">
-            <div class="lab-num">{{ num }}</div>
-            <h3>{{ title }}</h3>
-            <p>{{ desc }}</p>
+            <div class="lab-num">Lab 01</div>
+            <h3>HTML &amp; CSS</h3>
+            <p>Podstawy struktury i stylowania stron internetowych.</p>
+            <a href="https://gitlab.com/lab019795310/lab01" target="_blank" rel="noopener" class="lab-link">Zobacz projekt →</a>
         </div>
-        {% endfor %}
+        <div class="lab-card">
+            <div class="lab-num">Lab 02</div>
+            <h3>JavaScript</h3>
+            <p>Strona z projektami</p>
+            <a href="https://gitlab.com/bartosz.papinski00/lab02" target="_blank" rel="noopener" class="lab-link">Zobacz projekt →</a>
+        </div>
+        <div class="lab-card">
+            <div class="lab-num">Lab 03</div>
+            <h3>Kółko krzyżyk</h3>
+            <p>Gra w kółko i krzyżyk z wykorzystaniem JavaScript.</p>
+            <a href="https://gitlab.com/lab019795310/lab03" target="_blank" rel="noopener" class="lab-link">Zobacz projekt →</a>
+        </div>
+        <div class="lab-card">
+            <div class="lab-num">Lab 04</div>
+            <h3>RWD SPA</h3>
+            <p>Responsywna aplikacja jednostronicowa.</p>
+            <a href="https://gitlab.com/bartosz.papinski00/rwd-spa" target="_blank" rel="noopener" class="lab-link">Zobacz projekt →</a>
+        </div>
     </div>
 </section>
 {% endblock %}
