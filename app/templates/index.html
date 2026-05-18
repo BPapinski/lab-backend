@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Strona główna — Bartosz Papiński{% endblock %}
+{% block content %}
+<section class="hero">
+    <div class="hero-tag">Programowanie w Internecie</div>
+    <h1>Bartosz<br><em>Papiński</em></h1>
+    <p class="hero-sub">Laboratorium — projekt zaliczeniowy</p>
+    <div class="hero-actions">
+        <a href="{{ url_for('main.register') }}" class="btn btn-primary btn-lg">Zarejestruj się</a>
+        <a href="{{ url_for('main.login') }}" class="btn btn-outline btn-lg">Zaloguj się</a>
+    </div>
+    <div class="download-link">
+        <a href="{{ url_for('main.download') }}">⬇ Pobierz kod źródłowy (ZIP)</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Panel — {{ current_user.username }}{% endblock %}
+{% block content %}
+<section class="dashboard">
+    <div class="dash-header">
+        <h2>Witaj, <em>{{ current_user.username }}</em></h2>
+        <span class="badge">Zalogowany</span>
+    </div>
+    <div class="labs-grid">
+        {% set labs = [
+            ("Lab 01", "HTML & CSS", "Podstawy struktury i stylowania stron"),
+            ("Lab 02", "JavaScript", "Interaktywność i dynamiczne elementy"),
+            ("Lab 03", "Responsive Design", "RWD i media queries"),
+            ("Lab 04", "Formularze", "Walidacja i obsługa danych"),
+            ("Lab 05", "Backend", "Serwer, MVC, bazy danych"),
+            ("Lab 06", "Projekt", "Finalny projekt zaliczeniowy"),
+        ] %}
+        {% for num, title, desc in labs %}
+        <div class="lab-card">
+            <div class="lab-num">{{ num }}</div>
+            <h3>{{ title }}</h3>
+            <p>{{ desc }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

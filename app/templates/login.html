@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Logowanie{% endblock %}
+{% block content %}
+<section class="form-section">
+    <div class="form-card">
+        <h2>Logowanie</h2>
+        <form method="POST">
+            <div class="field">
+                <label>Nazwa użytkownika</label>
+                <input type="text" name="username" required autocomplete="username">
+            </div>
+            <div class="field">
+                <label>Hasło</label>
+                <input type="password" name="password" required autocomplete="current-password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Zaloguj się</button>
+        </form>
+        <p class="form-switch">Nie masz konta? <a href="{{ url_for('main.register') }}">Zarejestruj się</a></p>
+    </div>
+</section>
+{% endblock %}

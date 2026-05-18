@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Rejestracja{% endblock %}
+{% block content %}
+<section class="form-section">
+    <div class="form-card">
+        <h2>Rejestracja</h2>
+        <form method="POST">
+            <div class="field">
+                <label>Nazwa użytkownika</label>
+                <input type="text" name="username" required autocomplete="username">
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input type="email" name="email" required autocomplete="email">
+            </div>
+            <div class="field">
+                <label>Hasło (min. 6 znaków)</label>
+                <input type="password" name="password" required autocomplete="new-password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Zarejestruj się</button>
+        </form>
+        <p class="form-switch">Masz już konto? <a href="{{ url_for('main.login') }}">Zaloguj się</a></p>
+    </div>
+</section>
+{% endblock %}
