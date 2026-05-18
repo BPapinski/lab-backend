@@ -5,7 +5,7 @@ import os
 
 def create_app():
     app = Flask(__name__, template_folder='templates', static_folder='../static')
-    app.secret_key = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-prod')
+    app.secret_key = os.environ.get('APP_SECRET', 'dev-secret-key-change-in-prod')
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
