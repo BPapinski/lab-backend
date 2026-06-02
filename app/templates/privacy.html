@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}{{ t.page_titles.privacy }}{% endblock %}
+
+{% block content %}
+<section class="bp-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+
+                <a href="{{ url_for('main.index') }}" class="btn btn-outline-secondary btn-sm mb-4">
+                    &larr; {{ t.privacy.back }}
+                </a>
+
+                <h1 class="bp-section-title mb-4">{{ t.privacy.title }}</h1>
+                <p class="text-muted">{{ t.privacy.intro }}</p>
+
+                <hr class="border-secondary my-4">
+
+                <h2 class="h5 mt-4 mb-2">{{ t.privacy.section1_title }}</h2>
+                <p>{{ t.privacy.section1_text }}</p>
+
+                <h2 class="h5 mt-4 mb-2">{{ t.privacy.section2_title }}</h2>
+                <p>{{ t.privacy.section2_text }}</p>
+
+                <h2 class="h5 mt-4 mb-2">{{ t.privacy.section3_title }}</h2>
+                <p>{{ t.privacy.section3_text }}</p>
+
+                <h2 class="h5 mt-4 mb-2">{{ t.privacy.section4_title }}</h2>
+                <p>{{ t.privacy.section4_text }}</p>
+
+                <h2 class="h5 mt-4 mb-2">{{ t.privacy.contact_title }}</h2>
+                <p>
+                    <a href="mailto:bartosz.papinski@student.example.edu.pl" class="bp-contact-link">
+                        bartosz.papinski@student.example.edu.pl
+                    </a>
+                </p>
+
+                <hr class="border-secondary my-4">
+                <p class="text-muted small">{{ t.privacy.last_updated }}</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

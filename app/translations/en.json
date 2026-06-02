@@ -1,0 +1,110 @@
+{
+  "lang": "en",
+  "lang_name": "English",
+  "other_lang": "pl",
+  "other_lang_name": "Polski",
+  "nav": {
+    "brand": "BP / Labs",
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register"
+  },
+  "hero": {
+    "tag": "Web Programming",
+    "name": "Bartosz Papiński",
+    "subtitle": "Laboratory — Final Project",
+    "cta_register": "Register",
+    "cta_login": "Login",
+    "download": "Download source code (ZIP)"
+  },
+  "about": {
+    "title": "About the Project",
+    "p1": "Final project for the Web Programming course. Built with Flask and MVC architecture, supports multiple languages, and complies with EU cookie regulations.",
+    "p2": "Login or create an account to access all completed laboratory projects."
+  },
+  "projects": {
+    "title": "Laboratories",
+    "see": "View project →",
+    "lab01_title": "HTML &amp; CSS",
+    "lab01_desc": "Basics of web structure and styling.",
+    "lab02_title": "JavaScript",
+    "lab02_desc": "Projects page in JavaScript.",
+    "lab03_title": "Tic-Tac-Toe",
+    "lab03_desc": "Tic-tac-toe game using JavaScript.",
+    "lab04_title": "RWD SPA",
+    "lab04_desc": "Responsive single-page application.",
+    "lab05_title": "Final Project",
+    "lab05_desc": "Authentication portal with MVC architecture and multi-language support.",
+    "login_prompt": "Login to view project links.",
+    "login_btn": "Login"
+  },
+  "contact": {
+    "title": "Contact",
+    "email_label": "Email",
+    "uni_label": "Course",
+    "uni_name": "Web Programming — 2025/2026"
+  },
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Login",
+    "switch_text": "Don't have an account?",
+    "switch_link": "Register",
+    "error_invalid": "Invalid username or password."
+  },
+  "register": {
+    "title": "Register",
+    "username": "Username",
+    "email": "Email address",
+    "password": "Password (min. 6 characters)",
+    "submit": "Register",
+    "switch_text": "Already have an account?",
+    "switch_link": "Login",
+    "error_username": "Username is already taken.",
+    "error_email": "This email address is already registered.",
+    "error_password": "Password must be at least 6 characters long."
+  },
+  "dashboard": {
+    "welcome": "Welcome,",
+    "badge": "Logged in",
+    "labs_title": "Your Laboratories",
+    "logout_btn": "Logout"
+  },
+  "cookies": {
+    "text": "This site uses only essential cookies required for user session management. By continuing, you consent to their use.",
+    "accept": "Accept",
+    "more": "Privacy Policy"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "back": "Back",
+    "intro": "This website uses cookies only to the extent necessary for its proper operation.",
+    "section1_title": "What cookies do we use?",
+    "section1_text": "We use only session cookies that are necessary for the login system to function. We do not use analytical, advertising, or tracking cookies.",
+    "section2_title": "What data do we collect?",
+    "section2_text": "During registration we collect: username, email address, and an encrypted password. Data is stored on the server and is not shared with third parties.",
+    "section3_title": "Legal basis",
+    "section3_text": "Data processing is based on Art. 6(1)(b) GDPR (contract performance) and Art. 6(1)(f) GDPR (legitimate interest of the data controller).",
+    "section4_title": "User rights",
+    "section4_text": "You have the right to access your data, rectify it, erase it, or restrict its processing. To exercise these rights, please contact the data controller.",
+    "contact_title": "Contact the data controller",
+    "last_updated": "Last updated: June 2026"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "made_with": "Web Programming Final Project"
+  },
+  "page_titles": {
+    "home": "Home — Bartosz Papiński",
+    "login": "Login — BP/Labs",
+    "register": "Register — BP/Labs",
+    "dashboard": "Dashboard — BP/Labs",
+    "privacy": "Privacy Policy — BP/Labs"
+  }
+}

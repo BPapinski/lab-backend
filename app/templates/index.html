@@ -1,16 +1,184 @@
 {% extends "base.html" %}
-{% block title %}Strona główna — Bartosz Papiński{% endblock %}
+{% block title %}{{ t.page_titles.home }}{% endblock %}
+
 {% block content %}
-<section class="hero">
-    <div class="hero-tag">Programowanie w Internecie</div>
-    <h1>Bartosz<br><em>Papiński</em></h1>
-    <p class="hero-sub">Laboratorium — projekt zaliczeniowy</p>
-    <div class="hero-actions">
-        <a href="{{ url_for('main.register') }}" class="btn btn-primary btn-lg">Zarejestruj się</a>
-        <a href="{{ url_for('main.login') }}" class="btn btn-outline btn-lg">Zaloguj się</a>
+
+<!-- ====================================================================
+     HERO SECTION
+===================================================================== -->
+<section id="hero" class="bp-hero d-flex align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10 col-xl-8 text-center">
+                <span class="bp-tag">{{ t.hero.tag }}</span>
+                <h1 class="bp-hero-name">{{ t.hero.name }}</h1>
+                <p class="bp-hero-sub">{{ t.hero.subtitle }}</p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
+                    {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('main.dashboard') }}" class="btn btn-accent btn-lg px-4">
+                            {{ t.dashboard.labs_title }}
+                        </a>
+                        <a href="{{ url_for('main.download') }}" class="btn btn-outline-light btn-lg px-4">
+                            {{ t.hero.download }}
+                        </a>
+                    {% else %}
+                        <a href="{{ url_for('main.register') }}" class="btn btn-accent btn-lg px-4">
+                            {{ t.hero.cta_register }}
+                        </a>
+                        <a href="{{ url_for('main.login') }}" class="btn btn-outline-light btn-lg px-4">
+                            {{ t.hero.cta_login }}
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="mt-3">
+                    <a href="{{ url_for('main.download') }}" class="bp-download-link">
+                        &#8615; {{ t.hero.download }}
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="download-link">
-        <a href="{{ url_for('main.download') }}">⬇ Pobierz kod źródłowy (ZIP)</a>
+    <!-- Scroll indicator -->
+    <a href="#about" class="bp-scroll-indicator" aria-label="Scroll down">
+        <span></span>
+    </a>
+</section>
+
+<!-- ====================================================================
+     ABOUT SECTION
+===================================================================== -->
+<section id="about" class="bp-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <h2 class="bp-section-title">{{ t.about.title }}</h2>
+                <p class="bp-section-text">{{ t.about.p1 }}</p>
+                <p class="bp-section-text">{{ t.about.p2 }}</p>
+                <div class="bp-tech-stack mt-4 d-flex flex-wrap gap-2">
+                    <span class="bp-badge">Python / Flask</span>
+                    <span class="bp-badge">MVC</span>
+                    <span class="bp-badge">SQLite</span>
+                    <span class="bp-badge">Bootstrap 5</span>
+                    <span class="bp-badge">i18n</span>
+                    <span class="bp-badge">GDPR / EU</span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+
+<!-- ====================================================================
+     PROJECTS SECTION
+===================================================================== -->
+<section id="projects" class="bp-section bp-section--alt">
+    <div class="container">
+        <h2 class="bp-section-title text-center mb-5">{{ t.projects.title }}</h2>
+        <div class="row g-4">
+
+            <!-- Lab 01 -->
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="bp-card h-100">
+                    <div class="bp-card-num">Lab 01</div>
+                    <h3 class="bp-card-title">{{ t.projects.lab01_title | safe }}</h3>
+                    <p class="bp-card-desc">{{ t.projects.lab01_desc }}</p>
+                    {% if current_user.is_authenticated %}
+                        <a href="https://gitlab.com/lab019795310/lab01" target="_blank" rel="noopener noreferrer" class="bp-card-link">{{ t.projects.see }}</a>
+                    {% else %}
+                        <a href="{{ url_for('main.login') }}" class="bp-card-link bp-card-link--locked">{{ t.projects.login_btn }}</a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Lab 02 -->
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="bp-card h-100">
+                    <div class="bp-card-num">Lab 02</div>
+                    <h3 class="bp-card-title">{{ t.projects.lab02_title }}</h3>
+                    <p class="bp-card-desc">{{ t.projects.lab02_desc }}</p>
+                    {% if current_user.is_authenticated %}
+                        <a href="https://gitlab.com/bartosz.papinski00/lab02" target="_blank" rel="noopener noreferrer" class="bp-card-link">{{ t.projects.see }}</a>
+                    {% else %}
+                        <a href="{{ url_for('main.login') }}" class="bp-card-link bp-card-link--locked">{{ t.projects.login_btn }}</a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Lab 03 -->
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="bp-card h-100">
+                    <div class="bp-card-num">Lab 03</div>
+                    <h3 class="bp-card-title">{{ t.projects.lab03_title }}</h3>
+                    <p class="bp-card-desc">{{ t.projects.lab03_desc }}</p>
+                    {% if current_user.is_authenticated %}
+                        <a href="https://gitlab.com/lab019795310/lab03" target="_blank" rel="noopener noreferrer" class="bp-card-link">{{ t.projects.see }}</a>
+                    {% else %}
+                        <a href="{{ url_for('main.login') }}" class="bp-card-link bp-card-link--locked">{{ t.projects.login_btn }}</a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Lab 04 -->
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="bp-card h-100">
+                    <div class="bp-card-num">Lab 04</div>
+                    <h3 class="bp-card-title">{{ t.projects.lab04_title }}</h3>
+                    <p class="bp-card-desc">{{ t.projects.lab04_desc }}</p>
+                    {% if current_user.is_authenticated %}
+                        <a href="https://gitlab.com/bartosz.papinski00/rwd-spa" target="_blank" rel="noopener noreferrer" class="bp-card-link">{{ t.projects.see }}</a>
+                    {% else %}
+                        <a href="{{ url_for('main.login') }}" class="bp-card-link bp-card-link--locked">{{ t.projects.login_btn }}</a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Lab 05 -->
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="bp-card h-100 bp-card--current">
+                    <div class="bp-card-num">Lab 05</div>
+                    <h3 class="bp-card-title">{{ t.projects.lab05_title }}</h3>
+                    <p class="bp-card-desc">{{ t.projects.lab05_desc }}</p>
+                    <a href="{{ url_for('main.download') }}" class="bp-card-link">{{ t.hero.download }}</a>
+                </div>
+            </div>
+
+        </div>
+
+        {% if not current_user.is_authenticated %}
+        <div class="text-center mt-5">
+            <p class="text-muted">{{ t.projects.login_prompt }}</p>
+            <a href="{{ url_for('main.login') }}" class="btn btn-accent btn-sm px-4">
+                {{ t.projects.login_btn }}
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- ====================================================================
+     CONTACT SECTION
+===================================================================== -->
+<section id="contact" class="bp-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 text-center">
+                <h2 class="bp-section-title">{{ t.contact.title }}</h2>
+                <dl class="bp-contact-list mt-4">
+                    <div class="bp-contact-item">
+                        <dt>{{ t.contact.email_label }}</dt>
+                        <dd>
+                            <a href="mailto:bartosz.papinski@student.example.edu.pl" class="bp-contact-link">
+                                bartosz.papinski@student.example.edu.pl
+                            </a>
+                        </dd>
+                    </div>
+                    <div class="bp-contact-item">
+                        <dt>{{ t.contact.uni_label }}</dt>
+                        <dd>{{ t.contact.uni_name }}</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

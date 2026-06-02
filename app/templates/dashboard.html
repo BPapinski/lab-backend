@@ -1,35 +1,84 @@
 {% extends "base.html" %}
-{% block title %}Panel — {{ current_user.username }}{% endblock %}
+{% block title %}{{ t.page_titles.dashboard }} — {{ current_user.username }}{% endblock %}
+
 {% block content %}
-<section class="dashboard">
-    <div class="dash-header">
-        <h2>Witaj, <em>{{ current_user.username }}</em></h2>
-        <span class="badge">Zalogowany</span>
-    </div>
-    <div class="labs-grid">
-        <div class="lab-card">
-            <div class="lab-num">Lab 01</div>
-            <h3>HTML &amp; CSS</h3>
-            <p>Podstawy struktury i stylowania stron internetowych.</p>
-            <a href="https://gitlab.com/lab019795310/lab01" target="_blank" rel="noopener" class="lab-link">Zobacz projekt →</a>
+<section class="bp-dashboard py-5">
+    <div class="container">
+
+        <!-- Header -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3">
+                    <div>
+                        <h1 class="bp-dash-welcome h2 mb-1">
+                            {{ t.dashboard.welcome }} <em>{{ current_user.username }}</em>
+                        </h1>
+                        <span class="badge bg-accent text-dark">{{ t.dashboard.badge }}</span>
+                    </div>
+                    <a href="{{ url_for('main.logout') }}" class="btn btn-outline-light btn-sm align-self-start align-self-sm-center">
+                        {{ t.dashboard.logout_btn }}
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="lab-card">
-            <div class="lab-num">Lab 02</div>
-            <h3>JavaScript</h3>
-            <p>Strona z projektami</p>
-            <a href="https://gitlab.com/bartosz.papinski00/lab02" target="_blank" rel="noopener" class="lab-link">Zobacz projekt →</a>
-        </div>
-        <div class="lab-card">
-            <div class="lab-num">Lab 03</div>
-            <h3>Kółko krzyżyk</h3>
-            <p>Gra w kółko i krzyżyk z wykorzystaniem JavaScript.</p>
-            <a href="https://gitlab.com/lab019795310/lab03" target="_blank" rel="noopener" class="lab-link">Zobacz projekt →</a>
-        </div>
-        <div class="lab-card">
-            <div class="lab-num">Lab 04</div>
-            <h3>RWD SPA</h3>
-            <p>Responsywna aplikacja jednostronicowa.</p>
-            <a href="https://gitlab.com/bartosz.papinski00/rwd-spa" target="_blank" rel="noopener" class="lab-link">Zobacz projekt →</a>
+
+        <!-- Labs grid -->
+        <h2 class="bp-section-label mb-4">{{ t.dashboard.labs_title }}</h2>
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="bp-card h-100">
+                    <div class="bp-card-num">Lab 01</div>
+                    <h3 class="bp-card-title">{{ t.projects.lab01_title | safe }}</h3>
+                    <p class="bp-card-desc">{{ t.projects.lab01_desc }}</p>
+                    <a href="https://gitlab.com/lab019795310/lab01"
+                       target="_blank" rel="noopener noreferrer"
+                       class="bp-card-link">{{ t.projects.see }}</a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="bp-card h-100">
+                    <div class="bp-card-num">Lab 02</div>
+                    <h3 class="bp-card-title">{{ t.projects.lab02_title }}</h3>
+                    <p class="bp-card-desc">{{ t.projects.lab02_desc }}</p>
+                    <a href="https://gitlab.com/bartosz.papinski00/lab02"
+                       target="_blank" rel="noopener noreferrer"
+                       class="bp-card-link">{{ t.projects.see }}</a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="bp-card h-100">
+                    <div class="bp-card-num">Lab 03</div>
+                    <h3 class="bp-card-title">{{ t.projects.lab03_title }}</h3>
+                    <p class="bp-card-desc">{{ t.projects.lab03_desc }}</p>
+                    <a href="https://gitlab.com/lab019795310/lab03"
+                       target="_blank" rel="noopener noreferrer"
+                       class="bp-card-link">{{ t.projects.see }}</a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="bp-card h-100">
+                    <div class="bp-card-num">Lab 04</div>
+                    <h3 class="bp-card-title">{{ t.projects.lab04_title }}</h3>
+                    <p class="bp-card-desc">{{ t.projects.lab04_desc }}</p>
+                    <a href="https://gitlab.com/bartosz.papinski00/rwd-spa"
+                       target="_blank" rel="noopener noreferrer"
+                       class="bp-card-link">{{ t.projects.see }}</a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="bp-card h-100 bp-card--current">
+                    <div class="bp-card-num">Lab 05</div>
+                    <h3 class="bp-card-title">{{ t.projects.lab05_title }}</h3>
+                    <p class="bp-card-desc">{{ t.projects.lab05_desc }}</p>
+                    <a href="{{ url_for('main.download') }}" class="bp-card-link">{{ t.hero.download }}</a>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

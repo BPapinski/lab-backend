@@ -1,0 +1,110 @@
+{
+  "lang": "pl",
+  "lang_name": "Polski",
+  "other_lang": "en",
+  "other_lang_name": "English",
+  "nav": {
+    "brand": "BP / Labs",
+    "home": "Strona główna",
+    "about": "O projekcie",
+    "projects": "Projekty",
+    "contact": "Kontakt",
+    "login": "Logowanie",
+    "logout": "Wyloguj",
+    "register": "Rejestracja"
+  },
+  "hero": {
+    "tag": "Programowanie w Internecie",
+    "name": "Bartosz Papiński",
+    "subtitle": "Laboratorium — projekt końcowy",
+    "cta_register": "Zarejestruj się",
+    "cta_login": "Zaloguj się",
+    "download": "Pobierz kod źródłowy (ZIP)"
+  },
+  "about": {
+    "title": "O projekcie",
+    "p1": "Projekt końcowy z przedmiotu Programowanie w Internecie. Strona zrealizowana w technologii Flask z wzorcem MVC, obsługuje wiele języków i spełnia wymogi UE dotyczące plików cookies.",
+    "p2": "Zaloguj się lub utwórz konto, aby uzyskać dostęp do wszystkich zrealizowanych laboratoriów."
+  },
+  "projects": {
+    "title": "Laboratoria",
+    "see": "Zobacz projekt →",
+    "lab01_title": "HTML &amp; CSS",
+    "lab01_desc": "Podstawy struktury i stylowania stron internetowych.",
+    "lab02_title": "JavaScript",
+    "lab02_desc": "Strona z projektami w JavaScript.",
+    "lab03_title": "Kółko i krzyżyk",
+    "lab03_desc": "Gra w kółko i krzyżyk z wykorzystaniem JavaScript.",
+    "lab04_title": "RWD SPA",
+    "lab04_desc": "Responsywna aplikacja jednostronicowa.",
+    "lab05_title": "Projekt końcowy",
+    "lab05_desc": "Portal uwierzytelniania z architekturą MVC i obsługą wielu języków.",
+    "login_prompt": "Zaloguj się, aby zobaczyć linki do projektów.",
+    "login_btn": "Zaloguj się"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "email_label": "Email",
+    "uni_label": "Przedmiot",
+    "uni_name": "Programowanie w Internecie — 2025/2026"
+  },
+  "login": {
+    "title": "Logowanie",
+    "username": "Nazwa użytkownika",
+    "password": "Hasło",
+    "submit": "Zaloguj się",
+    "switch_text": "Nie masz konta?",
+    "switch_link": "Zarejestruj się",
+    "error_invalid": "Nieprawidłowa nazwa użytkownika lub hasło."
+  },
+  "register": {
+    "title": "Rejestracja",
+    "username": "Nazwa użytkownika",
+    "email": "Adres e-mail",
+    "password": "Hasło (min. 6 znaków)",
+    "submit": "Zarejestruj się",
+    "switch_text": "Masz już konto?",
+    "switch_link": "Zaloguj się",
+    "error_username": "Nazwa użytkownika jest już zajęta.",
+    "error_email": "Ten adres e-mail jest już zarejestrowany.",
+    "error_password": "Hasło musi mieć co najmniej 6 znaków."
+  },
+  "dashboard": {
+    "welcome": "Witaj,",
+    "badge": "Zalogowany",
+    "labs_title": "Twoje laboratoria",
+    "logout_btn": "Wyloguj się"
+  },
+  "cookies": {
+    "text": "Ta strona używa plików cookies niezbędnych do jej działania (sesja użytkownika). Kontynuując przeglądanie, wyrażasz zgodę na ich użycie.",
+    "accept": "Akceptuję",
+    "more": "Polityka prywatności"
+  },
+  "privacy": {
+    "title": "Polityka prywatności",
+    "back": "Powrót",
+    "intro": "Ta strona internetowa korzysta z plików cookies wyłącznie w zakresie niezbędnym do jej poprawnego działania.",
+    "section1_title": "Jakie cookies używamy?",
+    "section1_text": "Używamy wyłącznie sesyjnych plików cookies, które są niezbędne do działania systemu logowania. Nie używamy cookies analitycznych, reklamowych ani śledzących.",
+    "section2_title": "Jakie dane zbieramy?",
+    "section2_text": "Podczas rejestracji zbieramy: nazwę użytkownika, adres e-mail oraz zaszyfrowane hasło. Dane są przechowywane na serwerze i nie są udostępniane podmiotom trzecim.",
+    "section3_title": "Podstawa prawna",
+    "section3_text": "Przetwarzanie danych odbywa się na podstawie art. 6 ust. 1 lit. b RODO (realizacja umowy) oraz art. 6 ust. 1 lit. f RODO (uzasadniony interes administratora).",
+    "section4_title": "Prawa użytkownika",
+    "section4_text": "Masz prawo dostępu do swoich danych, ich sprostowania, usunięcia lub ograniczenia przetwarzania. W celu realizacji tych praw skontaktuj się z administratorem.",
+    "contact_title": "Kontakt z administratorem",
+    "last_updated": "Ostatnia aktualizacja: czerwiec 2026"
+  },
+  "footer": {
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "privacy": "Polityka prywatności",
+    "made_with": "Projekt końcowy PwI"
+  },
+  "page_titles": {
+    "home": "Strona główna — Bartosz Papiński",
+    "login": "Logowanie — BP/Labs",
+    "register": "Rejestracja — BP/Labs",
+    "dashboard": "Panel — BP/Labs",
+    "privacy": "Polityka prywatności — BP/Labs"
+  }
+}

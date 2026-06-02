@@ -1,25 +1,52 @@
 {% extends "base.html" %}
-{% block title %}Rejestracja{% endblock %}
+{% block title %}{{ t.page_titles.register }}{% endblock %}
+
 {% block content %}
-<section class="form-section">
-    <div class="form-card">
-        <h2>Rejestracja</h2>
-        <form method="POST">
-            <div class="field">
-                <label>Nazwa użytkownika</label>
-                <input type="text" name="username" required autocomplete="username">
+<section class="bp-form-section d-flex align-items-center justify-content-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-5">
+                <div class="bp-form-card">
+                    <h1 class="bp-form-title h3 mb-4">{{ t.register.title }}</h1>
+                    <form method="POST" novalidate>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">{{ t.register.username }}</label>
+                            <input type="text"
+                                   id="username"
+                                   name="username"
+                                   class="form-control"
+                                   required
+                                   autocomplete="username"
+                                   autofocus>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">{{ t.register.email }}</label>
+                            <input type="email"
+                                   id="email"
+                                   name="email"
+                                   class="form-control"
+                                   required
+                                   autocomplete="email">
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="form-label">{{ t.register.password }}</label>
+                            <input type="password"
+                                   id="password"
+                                   name="password"
+                                   class="form-control"
+                                   required
+                                   minlength="6"
+                                   autocomplete="new-password">
+                        </div>
+                        <button type="submit" class="btn btn-accent w-100">{{ t.register.submit }}</button>
+                    </form>
+                    <p class="bp-form-switch mt-3 text-center">
+                        {{ t.register.switch_text }}
+                        <a href="{{ url_for('main.login') }}">{{ t.register.switch_link }}</a>
+                    </p>
+                </div>
             </div>
-            <div class="field">
-                <label>Email</label>
-                <input type="email" name="email" required autocomplete="email">
-            </div>
-            <div class="field">
-                <label>Hasło (min. 6 znaków)</label>
-                <input type="password" name="password" required autocomplete="new-password">
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">Zarejestruj się</button>
-        </form>
-        <p class="form-switch">Masz już konto? <a href="{{ url_for('main.login') }}">Zaloguj się</a></p>
+        </div>
     </div>
 </section>
 {% endblock %}

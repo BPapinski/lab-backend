@@ -1,21 +1,42 @@
 {% extends "base.html" %}
-{% block title %}Logowanie{% endblock %}
+{% block title %}{{ t.page_titles.login }}{% endblock %}
+
 {% block content %}
-<section class="form-section">
-    <div class="form-card">
-        <h2>Logowanie</h2>
-        <form method="POST">
-            <div class="field">
-                <label>Nazwa użytkownika</label>
-                <input type="text" name="username" required autocomplete="username">
+<section class="bp-form-section d-flex align-items-center justify-content-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-5">
+                <div class="bp-form-card">
+                    <h1 class="bp-form-title h3 mb-4">{{ t.login.title }}</h1>
+                    <form method="POST" novalidate>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">{{ t.login.username }}</label>
+                            <input type="text"
+                                   id="username"
+                                   name="username"
+                                   class="form-control"
+                                   required
+                                   autocomplete="username"
+                                   autofocus>
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="form-label">{{ t.login.password }}</label>
+                            <input type="password"
+                                   id="password"
+                                   name="password"
+                                   class="form-control"
+                                   required
+                                   autocomplete="current-password">
+                        </div>
+                        <button type="submit" class="btn btn-accent w-100">{{ t.login.submit }}</button>
+                    </form>
+                    <p class="bp-form-switch mt-3 text-center">
+                        {{ t.login.switch_text }}
+                        <a href="{{ url_for('main.register') }}">{{ t.login.switch_link }}</a>
+                    </p>
+                </div>
             </div>
-            <div class="field">
-                <label>Hasło</label>
-                <input type="password" name="password" required autocomplete="current-password">
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">Zaloguj się</button>
-        </form>
-        <p class="form-switch">Nie masz konta? <a href="{{ url_for('main.register') }}">Zarejestruj się</a></p>
+        </div>
     </div>
 </section>
 {% endblock %}
